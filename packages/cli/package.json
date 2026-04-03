@@ -1,0 +1,23 @@
+{
+	"name": "modui",
+	"version": "0.0.1",
+	"description": "CSS Modules UI components for React. Copy, paste, customize.",
+	"license": "MIT",
+	"type": "module",
+	"bin": {
+		"modui": "./dist/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"check-types": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@repo/typescript-config": "workspace:*",
+		"@types/node": "^22.15.3",
+		"tsup": "^8.5.0"
+	}
+}
