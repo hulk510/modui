@@ -1,11 +1,14 @@
 {
-	"name": "modui",
+	"name": "@mod-ui/cli",
 	"version": "0.0.1",
 	"description": "CSS Modules UI components for React. Copy, paste, customize.",
 	"license": "MIT",
 	"type": "module",
 	"bin": {
-		"modui": "./dist/index.js"
+		"modui": "dist/index.js"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"files": [
 		"dist"
