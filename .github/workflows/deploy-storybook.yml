@@ -1,4 +1,4 @@
-name: Deploy Storybook to GitHub Pages
+name: Deploy Storybook and registry to GitHub Pages
 
 on:
   push:
@@ -32,6 +32,13 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm --filter @mod-ui/docs build
+
+      - run: pnpm --filter @mod-ui/registry build
+
+      - name: Stage registry under /r
+        run: |
+          mkdir -p apps/docs/storybook-static/r
+          cp -R packages/registry/dist/registry/. apps/docs/storybook-static/r/
 
       - uses: actions/configure-pages@v5
 
